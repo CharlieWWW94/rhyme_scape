@@ -18,7 +18,7 @@ module RhymeScape
         def handle(request, response)
           if request.params.valid?
             rom.relations[:poems].changeset(:create, request.params[:poem]).commit
-            response.body = self.class.name
+            response.redirect_to routes.path(:poems)
           else
             response.status = 422
             response.body = "That didn't work"

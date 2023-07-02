@@ -1,1 +1,14 @@
 <h1>RhymeScape::Views::Poems::New</h1>
+<h1>Write Your Poem</h1>
+
+<%= form_for("poem", routes.path(:poems)) do |f| %>
+  <%= f.label "title" %>
+  <%= f.text_field "title" %>
+  <%= f.label "author" %>
+  <%= f.text_field "author" %>
+  <%= f.label "body" %>
+  <%= f.text_field "body" %>
+  <%= f.label "prompt" %>
+  <%= f.text_field "prompt" %>
+  <%= f.submit "Create" %>
+<% end %>

@@ -1,6 +1,6 @@
 <h1>RhymeScape::Views::Poems::Index</h1>
 <% poems.each do |poem| %>
   <h1>
-    <%=poem[:title] %>
+    <%= link_to "#{poem[:title]}", routes.path(:poem, id: poem[:id]) %>
   </h1>
 <% end %>
